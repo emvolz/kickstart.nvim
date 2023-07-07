@@ -206,6 +206,9 @@ require('lazy').setup({
   -- {'Nvim-R'},
 }, {})
 
+-- require leap, for leaping
+require('leap').add_default_mappings()
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
