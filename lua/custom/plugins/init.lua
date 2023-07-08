@@ -5,4 +5,15 @@
 return {
  'jamespeapen/Nvim-R'
  , 'ggandor/leap.nvim'
+ -- , {
+ --    'patstockwell/vim-monokai-tasty', 
+ --    priority = 1000,
+ --    opts = {
+	-- -- vim_monokai_tasty_machine_tint = 0, 
+	-- vim_monokai_tasty_italic = 1
+	-- 	}, 
+ --    config = function()
+ --      vim.cmd.colorscheme 'vim-monokai-tasty'
+ --    end,
+ --  }
 }
