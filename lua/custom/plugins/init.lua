@@ -3,8 +3,11 @@
 --
 -- See the kickstart.nvim README for more information
 return {
- 'jamespeapen/Nvim-R'
- , 'ggandor/leap.nvim'
+ 	{
+ 		'jamespeapen/Nvim-R'
+ 	}
+	, 'ggandor/leap.nvim'
+	-- , 'Thyrum/vim-stabs'
  -- , {
  --    'patstockwell/vim-monokai-tasty', 
  --    priority = 1000,

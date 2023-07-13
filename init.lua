@@ -251,6 +251,22 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- EV default indent behavior with Tab
+vim.o.autoindent = true
+vim.o.noexpandtab = true
+vim.o.copyindent = true
+vim.o.preserveindent = true
+vim.o.softtabstop=0
+vim.o.shiftwidth=8
+vim.o.tabstop=8
+vim.o.indentexpr=
+
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = "r",
+-- 	command = "setlocal noet ci pi sts=0 sw=8 ts=8"
+-- })
+
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
