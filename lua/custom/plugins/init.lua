@@ -6,6 +6,7 @@ return {
  	{
  		'jamespeapen/Nvim-R'
  	}
+ 	, 'f3fora/cmp-spell'
 	, 'ggandor/leap.nvim'
 	, {
 		'mvllow/modes.nvim'

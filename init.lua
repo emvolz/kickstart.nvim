@@ -261,10 +261,9 @@ vim.o.shiftwidth=8
 vim.o.tabstop=8
 vim.o.indentexpr=
 
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = "r",
--- 	command = "setlocal noet ci pi sts=0 sw=8 ts=8"
--- })
+-- EV spell mode 
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { 'en_us' }
 
 
 -- [[ Basic Keymaps ]]
@@ -532,6 +531,14 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'spell',
+      option = {
+                keep_all_entries = false,
+                enable_in_context = function()
+                    return true
+                end,
+            },
+    },
   },
 }
 
