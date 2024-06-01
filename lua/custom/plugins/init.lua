@@ -70,16 +70,27 @@ return {
 		, 'nvim-tree/nvim-web-devicons'     -- optional
 		}
 	}
-	-- , 'Thyrum/vim-stabs'
- -- , {
- --    'patstockwell/vim-monokai-tasty', 
- --    priority = 1000,
- --    opts = {
-	-- -- vim_monokai_tasty_machine_tint = 0, 
-	-- vim_monokai_tasty_italic = 1
-	-- 	}, 
- --    config = function()
- --      vim.cmd.colorscheme 'vim-monokai-tasty'
- --    end,
- --  }
+	, {
+		"michaelb/sniprun",
+		branch = "master",
+
+		build = "sh install.sh",
+		-- do 'sh install.sh 1' if you want to force compile locally
+		-- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+
+		config = function()
+			require("sniprun").setup({
+			-- your options
+				repl_enable = {'Julia_original'},
+				display = {
+					"TerminalWithCode"
+				},
+				live_mode_toggle='off', --enable 
+				display_options = {
+					terminal_width = 80
+				},
+			})
+			end,
+	},
 }
+
