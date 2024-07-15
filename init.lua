@@ -357,6 +357,20 @@ vim.api.nvim_set_keymap('v', 'f', '<Plug>SnipRun', {silent = true})
 vim.api.nvim_set_keymap('n', '<leader>f', '<Plug>SnipRunOperator', {silent = true})
 vim.api.nvim_set_keymap('n', '<leader>ff', '<Plug>SnipRun', {silent = true})
 
+-- EV markdown 
+vim.keymap.set('n', '<leader>mt', 'i:::::::::<Space>{.columns}<CR><CR>:::::::::<Up><Esc>', {remap = true})
+vim.keymap.set('n', '<leader>mc', 'i::::<Space>{.column<Space>widht=<BS><BS><BS>th="50%"}<CR><CR>::::<Up><Esc>', {remap = true})
+
+-- EV general editing remaps 
+vim.keymap.set("n", "<leader>J", ":m +1<CR>")
+vim.keymap.set("n", "<leader>K", ":m -2<CR>")
+
+-- EV misc remaps for split terminals 
+vim.api.nvim_set_keymap('n', '<C-t>', '<C-w>v<C-w>l:<C-v>terminal<CR>a', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('t', '<C-w>', '<C-\\><C-n><C-w>h', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<C-r>', 'y<C-w>lG$p', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('v', '<C-y>', '"y<C-w>l:terminal<CR>G$p<CR>', {noremap = true, silent = true})
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
